@@ -271,7 +271,6 @@ function getFibonacciNumber(i) {
     (((1 + Math.sqrt(5)) / 2) ** i - ((1 - Math.sqrt(5)) / 2) ** i) /
       Math.sqrt(5)
   );
-  // throw new Error('Not implemented');
 }
 
 /**
@@ -285,8 +284,8 @@ function getFibonacciNumber(i) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  return ((n + 1) * n) / 2;
 }
 
 /**
@@ -300,8 +299,11 @@ function getSumToN(/* n */) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  return num
+    .toString()
+    .split('')
+    .reduce((a, b) => a + +b, 0);
 }
 
 /**
@@ -315,8 +317,12 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  return !num
+    .toString(2)
+    .slice(1)
+    .split('')
+    .reduce((a, b) => a + +b, 0);
 }
 
 /**
